@@ -3,7 +3,7 @@ name: Deploy naar GitHub Pages
 on:
   push:
     branches:
-      - claude/nutrition-plan-dinner-generator-4s933r
+      - main
   workflow_dispatch:
 
 permissions:
