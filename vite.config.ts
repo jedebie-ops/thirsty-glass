@@ -5,6 +5,9 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // Relatief basispad: werkt zowel lokaal (dev/preview op root) als op een
+  // sub-pad zoals GitHub Pages' https://<user>.github.io/<repo>/.
+  base: './',
   plugins: [
     react(),
     tailwindcss(),
@@ -18,22 +21,22 @@ export default defineConfig({
         theme_color: '#FF6B4A',
         background_color: '#FFF8F0',
         display: 'standalone',
-        start_url: '/',
-        scope: '/',
+        start_url: './',
+        scope: './',
         lang: 'nl',
         icons: [
           {
-            src: '/icons/icon-192.png',
+            src: './icons/icon-192.png',
             sizes: '192x192',
             type: 'image/png',
           },
           {
-            src: '/icons/icon-512.png',
+            src: './icons/icon-512.png',
             sizes: '512x512',
             type: 'image/png',
           },
           {
-            src: '/icons/icon-maskable-512.png',
+            src: './icons/icon-maskable-512.png',
             sizes: '512x512',
             type: 'image/png',
             purpose: 'maskable',
